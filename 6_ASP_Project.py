@@ -10,12 +10,12 @@ data.index = data["Period"]
 
 data1 = data.loc[(data.Period >= str(1978)) & (data.Period <= str(1987))]
 
-col = data.filter(items=['Belgium & Luxembourg','Denmark',
+col = data1.filter(items=['Belgium & Luxembourg','Denmark',
  'Finland', 'France', 'Germany', 'Italy', 'Netherlands', 'Norway',
  'Rep Of Ireland', 'Russian Federation', 'Spain', 'Sweden', 'Switzerland',
  'United Kingdom'])
 
-print(col)
+print(col.columns)
 
 
 col = col.replace(',', '', regex= True)
