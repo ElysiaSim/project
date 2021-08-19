@@ -5,10 +5,10 @@ open = pd.read_excel("IMVA.xls", sheet_name=2)
 print(open)
 
 open1 = open["Periods"].str.split(" ", n = 1, expand = True)
-data = open.assign(Years= open1[0])
-data.index = data["Years"]
+data = open.assign(Period= open1[0])
+data.index = data["Period"]
 del data["Periods"]
 
 
-data = data.loc[(data.Years >= str(1978)) & (data.Years <= str(1987))]
+data = data.loc[(data.Period >= str(1978)) & (data.Period <= str(1987))]
 print(data)
