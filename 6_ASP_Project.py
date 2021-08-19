@@ -27,6 +27,8 @@ print("\n-------Sorted Countries-------")
 print(totalsum)
 print("\n-------Top 3 Countries-------")
 print(totalsum.head(3))
+print(sum(totalsum.head(3)))
+print(totalsum.head(3).mean())
 
 def allCountry():
     print("\n---------Top 3 Countries---------")
