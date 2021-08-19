@@ -8,7 +8,7 @@ open1 = open["Periods"].str.split(" ", n = 1, expand = True)
 data = open.assign(Period= open1[0])
 data.index = data["Period"]
 del data["Periods"]
-
+print(data.columns)
 
 data = data.loc[(data.Period >= str(1978)) & (data.Period <= str(1987))]
 print(data)
